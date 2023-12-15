@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Calculator</title>
+    <style>
+        .aj
+        {
+            text-align: center;
+            position: relative;
+            margin-top:-280px;
+            margin-left: 510px;
+            margin-right: 420px;
+            word-wrap: break-word;
+            color:black;
+            border-radius: 20px;
+            background-color: aliceblue;
+            opacity:0.2;
+        }
+        .aj:hover
+        {
+            cursor: pointer;
+            transition:0.7s ease-in-out;
+            opacity:0.5;
+        }
+        h2
+        {
+            color:black;
+        }
+        img
+        {
+            position:relative;
+            height:650px;
+            width:100%;
+        }
+        button
+        {
+            padding-left:30px;
+            padding-right: 30px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            background-color:black;
+            border-radius: 10px;
+            color:aliceblue;
+        }
+        button:hover
+        {
+            box-shadow:0 0 5px rgba(0, 0, 0, 0.5);
+            transform:scale(1.05);
+            cursor:pointer;
+        }
+        label
+        {
+            font-size:20px;
+        }
+        input
+        {
+            padding:6px;
+            border:none;
+            border-bottom: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <img src="cat.jpg">
+    <div class="aj">
+    <h2>Prime numbers B/W the interval</h2>
+    <script>
+        function prime(start,end)
+        {
+            var i,j;
+            for (i=start ; i<=end ; i++)
+            {
+                var flag=0;
+                for (j=2 ; j<i ; j++)
+                {
+                    if (i%j == 0)
+                    {
+                        flag=1;
+                        break;
+                    }
+                }
+                if (flag==0 && i>1)
+                {
+                    document.write(i+"<br>");
+                }
+            }
+        }
+    </script>
+    <form>
+        <label>Starting Number:</label>
+        <input name="a" placeholder="Starting number"><br><br>
+        <label>Ending Number:</label>
+        <input name="b" placeholder="Ending number"><br><br>
+        <button onclick="prime(a.value,b.value)">Check Now!</button>
+    </form>
+</div>
+</body>
+</html>

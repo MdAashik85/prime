@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Prime numbers from the interval</h3>
+    <script>
+        var i;
+        var j=prompt("Enter the frst:")
+        var num=prompt("Enter the number:");
+        for(i=j; i<=num; i++)
+        {
+            if(( i%1 == 0 && i%i == 0) && ( i%2 != 0 && i%3 != 0 ) )
+            {
+                document.write("i is:"+i+"<br>");
+            }
+        }
+    </script>
+</body>
+</html>
